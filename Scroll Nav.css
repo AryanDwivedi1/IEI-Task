@@ -1,0 +1,112 @@
+:root{
+    --navBackground: black;
+    --navHeight: 8%;
+    --textColor: rgb(100, 100, 100);
+    --textHover: rgb(8, 253, 216);
+    --textSize: 20px;
+}
+
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0;
+
+    /* padding-top: var(--navHeight); */
+}
+
+.nav{
+    width: 100vw;
+    height: var(--navHeight);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--navBackground);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.nav_hide{
+    /* transform: translateY(calc(-1 * var(--navHeight))); */
+    top: calc(-1 * var(--navHeight));
+
+}
+
+.link{
+    padding: 15px 0px;
+    position: relative;
+    box-sizing: border-box;
+    color: var(--textColor);
+    text-decoration: none;
+    font-family: copperplate;
+    font-size: var(--textSize);
+    font-weight: 700;
+
+    transition: all ease-in-out 0.3s;
+}
+.link::before{
+    content: "";
+    background-color: rgb(253,33,85);
+    height: 2.5px;
+    width: 0%;
+    position: absolute;
+    bottom: 28%;
+    z-index: 5;
+
+    transition: all ease-in-out 0.4s;
+}
+.link:hover::before{
+    height: 2.5px;
+    width: 100%;
+}
+.link:hover{
+    color: var(--textHover);
+}
+
+
+.content{
+    height: 100vh;
+    width: 100vw;
+    /* padding-top: 5.2%; */
+}
+.div{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 140px;
+    font-weight: 700;
+
+}
+
+.one{
+    height: calc(100% + var(--navHeight));
+    background-color: lightblue;
+}
+.two{
+    background-color: red;
+}
+.three{
+    background-color: plum;
+}
+.four{
+    background-color: peru;
+}
+.five{
+    background-color: lawngreen;
+}
+.six{
+    background-color: violet;
+}
+.seven{
+    background-color: yellow;
+}
+
